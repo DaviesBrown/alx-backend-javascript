@@ -4,8 +4,7 @@ import createReportObject from './12-createReportObject';
 import iterateThroughObject from './101-iterateThroughObject';
 
 const employees = {
-  ...createEmployeesObject('engineering', ['Bob', 'Jane']),
-  ...createEmployeesObject('marketing', ['Sylvie']),
+  ...createEmployeesObject('engineering', ['Bob']),
 };
 
 const report = createReportObject(employees);
