@@ -5,9 +5,10 @@ export function uploadPhoto() {
   });
 }
 
+
 export function createUser() {
   return Promise.resolve({
-    firstname: 'Guillaume',
-    lastname: 'Salva',
+    firstName: 'Guillaume',
+    lastName: 'Salva',
   });
 }
