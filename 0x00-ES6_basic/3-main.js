@@ -1,4 +1,4 @@
-import getSumOfHoods from "./3-default_parameter.js";
+import getSumOfHoods from './3-default_parameter';
 
 console.log(getSumOfHoods(34));
 console.log(getSumOfHoods(34, 3));
