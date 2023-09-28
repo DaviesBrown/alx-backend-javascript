@@ -9,9 +9,8 @@ export default function handleProfileSignup(firstName, lastName, filename) {
     .then((results) => {
       const r = results.map((result) => ({
         status: result.status,
-        value: result.value || result.reason,
+        value: result.value || `${result.reason}`,
       }));
-      console.log(r);
       return r;
     });
 }
