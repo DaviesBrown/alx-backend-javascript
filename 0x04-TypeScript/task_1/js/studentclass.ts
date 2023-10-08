@@ -3,17 +3,18 @@ interface StudentClassInterface {
     displayName: () => string;
 }
 
-interface StudentConstuctorInterface {
-    new (firstName: string, lastName: string): StudentClassInterface;
+interface StudentInterface {
+    firstName: string;
+    lastName: string
 }
 
 export default class StudentClass implements StudentClassInterface{
-    private _firstName: string;
-    private _lastName: string;
+    firstName: string;
+    lastName: string;
 
     constructor(firstName: string, lastName: string) {
-        this._firstName = firstName;
-        this._lastName = lastName;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public workOnHomework(): string {
@@ -21,6 +22,10 @@ export default class StudentClass implements StudentClassInterface{
     }
 
     public displayName(): string {
-        return this._firstName;
+        return this.firstName;
     }
 }
+
+let stu1 = new StudentClass('dave', 'jones')
+stu1.displayName()
+stu1.workOnHomework()
