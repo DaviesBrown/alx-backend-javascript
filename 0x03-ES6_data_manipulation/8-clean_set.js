@@ -1,11 +1,16 @@
-export default function cleanSet(set, startString) {
-  const text = [];
-  for (const x of set.values()) {
-    if (!startString) return '';
-    if (x.startsWith(startString)) {
-      text.push(x.slice(startString.length));
-    }
-  }
+// Returns a string of all the set values that start with a specific string (startString).
 
-  return text.join('-');
-}
+const cleanSet = (set, startString) => {
+  const result = [];
+  set.forEach((value) => {
+    if (value.startsWith(startString)) {
+      result.push(value.slice(startString.length));
+    }
+  });
+  if (!startString) {
+    return '';
+  }
+  return result.join('-');
+};
+
+export default cleanSet;
