@@ -1,12 +1,13 @@
-#!/usr/bin/node
-
 const express = require("express");
-const countStudents = require("./3-read_file_async");
 
 const app = express();
 const database = process.argv[2];
 
-const routes = require("./routes/index");
-app.use("/", routes)
+const router = require("./routes/index");
+app.use("/", router);
 
-app.listen(1245);
+
+const PORT = 1245;
+app.listen(PORT, () => console.log('listening on port 1245'));
+
+export default app;
