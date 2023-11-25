@@ -50,7 +50,7 @@ describe("POST /login", function() {
             body: JSON.stringify({userName: ""})
         };
         request.post(options, (err, res, body) => {
-            expect(res.statusCode).to.equal(200);
+            expect(res.statusCode).to.equal(400);
             done();
         });
     });
@@ -61,7 +61,7 @@ describe("POST /login", function() {
             body: JSON.stringify({})
         };
         request.post(options, (err, res, body) => {
-            expect(res.statusCode).to.equal(200);
+            expect(res.statusCode).to.equal(400);
             done();
         });
     });
