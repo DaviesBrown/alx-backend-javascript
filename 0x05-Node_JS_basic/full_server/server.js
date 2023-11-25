@@ -1,10 +1,10 @@
-const express = require("express");
+const express = require('express');
 
 const app = express();
-const database = process.argv[2];
 
-const router = require("./routes/index");
-app.use("/", router);
+const router = require('./routes/index');
+
+app.use('/', router);
 
 
 const PORT = 1245;

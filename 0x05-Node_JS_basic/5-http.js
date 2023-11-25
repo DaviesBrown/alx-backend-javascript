@@ -19,8 +19,8 @@ const app = http.createServer((req, res) => {
         const responseObject = JSON.parse(resultString);
         const final = {
           totalStudents: responseObject.numOfStudent,
-          csStudentsCount: responseObject.CS.split(",").length,
-          sweStudentsCount: responseObject.SWE.split(",").length,
+          csStudentsCount: responseObject.CS.split(',').length,
+          sweStudentsCount: responseObject.SWE.split(',').length,
           csStudentsList: responseObject.CS,
           sweStudentsList: responseObject.SWE,
         };
